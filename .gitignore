@@ -1,4 +1,4 @@
 .idea/
 */.idea/
-*/results/*
-!*/results/*
+results/*
+!*/results/.gitkeep
