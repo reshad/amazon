@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20230712 10:50:58.569" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.16 on darwin)">
+<suite source="/Users/mdreshadraihan/Sites/robotframework/amazon/Tests" id="s1" name="Tests">
+<suite source="/Users/mdreshadraihan/Sites/robotframework/amazon/Tests/Amazon.robot" id="s1-s1" name="Amazon">
+<kw type="SETUP" name="Insert Testing Data" library="Common">
+<kw name="Log" library="BuiltIn">
+<arg>Inserting testing data....</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230712 10:50:59.054" level="INFO">Inserting testing data....</msg>
+<status status="PASS" endtime="20230712 10:50:59.054" starttime="20230712 10:50:59.053"/>
+</kw>
+<kw name="Custom suite setup step" library="Common">
+<kw name="Log" library="BuiltIn">
+<arg>This is a custom suite setup step...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230712 10:50:59.054" level="INFO">This is a custom suite setup step...</msg>
+<status status="PASS" endtime="20230712 10:50:59.054" starttime="20230712 10:50:59.054"/>
+</kw>
+<status status="PASS" endtime="20230712 10:50:59.055" starttime="20230712 10:50:59.054"/>
+</kw>
+<status status="PASS" endtime="20230712 10:50:59.055" starttime="20230712 10:50:59.053"/>
+</kw>
+<test id="s1-s1-t1" name="User should be able to login">
+<kw type="SETUP" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230712 10:50:59.057" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20230712 10:51:02.643" starttime="20230712 10:50:59.057"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.644" starttime="20230712 10:50:59.056"/>
+</kw>
+<kw name="Login" library="AmazonApp">
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<kw name="Login With Valid Credentials" library="SignIn">
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<kw name="Fill &quot;Email&quot; Field" library="SignIn">
+<arg>${Username}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Filling Email Field With ${Username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230712 10:51:02.652" level="INFO">Filling Email Field With aihsiahsiahs</msg>
+<status status="PASS" endtime="20230712 10:51:02.652" starttime="20230712 10:51:02.652"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.653" starttime="20230712 10:51:02.650"/>
+</kw>
+<kw name="Fill &quot;Password&quot; Field" library="SignIn">
+<arg>${Password}</arg>
+<kw name="Log" library="BuiltIn">
+<arg>Filling Password Field With ${Password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230712 10:51:02.656" level="INFO">Filling Password Field With password1</msg>
+<status status="PASS" endtime="20230712 10:51:02.656" starttime="20230712 10:51:02.654"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.659" starttime="20230712 10:51:02.653"/>
+</kw>
+<kw name="Click &quot;Sign In&quot; Button" library="SignIn">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking Submit Button</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230712 10:51:02.662" level="INFO">Clicking Submit Button</msg>
+<status status="PASS" endtime="20230712 10:51:02.662" starttime="20230712 10:51:02.661"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.663" starttime="20230712 10:51:02.659"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.663" starttime="20230712 10:51:02.649"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.664" starttime="20230712 10:51:02.645"/>
+</kw>
+<kw type="TEARDOWN" name="End Web Test" library="Common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20230712 10:51:02.853" starttime="20230712 10:51:02.667"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.854" starttime="20230712 10:51:02.665"/>
+</kw>
+<tag>Login</tag>
+<tag>test</tag>
+<status status="PASS" endtime="20230712 10:51:02.855" starttime="20230712 10:50:59.055"/>
+</test>
+<kw type="TEARDOWN" name="Cleanup Testing Data" library="Common">
+<kw name="Log" library="BuiltIn">
+<arg>Cleaning up testing data...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230712 10:51:02.862" level="INFO">Cleaning up testing data...</msg>
+<status status="PASS" endtime="20230712 10:51:02.862" starttime="20230712 10:51:02.861"/>
+</kw>
+<kw name="Custom suite teardonw step" library="Common">
+<kw name="Log" library="BuiltIn">
+<arg>This is a custom suite teardown step...</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230712 10:51:02.864" level="INFO">This is a custom suite teardown step...</msg>
+<status status="PASS" endtime="20230712 10:51:02.864" starttime="20230712 10:51:02.863"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.866" starttime="20230712 10:51:02.862"/>
+</kw>
+<status status="PASS" endtime="20230712 10:51:02.866" starttime="20230712 10:51:02.858"/>
+</kw>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" endtime="20230712 10:51:02.867" starttime="20230712 10:50:58.598"/>
+</suite>
+<status status="PASS" endtime="20230712 10:51:02.877" starttime="20230712 10:50:58.572"/>
+</suite>
+<statistics>
+<total>
+<stat fail="0" skip="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" skip="0" pass="1">Login</stat>
+<stat fail="0" skip="0" pass="1">test</stat>
+</tag>
+<suite>
+<stat fail="0" skip="0" id="s1" name="Tests" pass="1">Tests</stat>
+<stat fail="0" skip="0" id="s1-s1" name="Amazon" pass="1">Tests.Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
